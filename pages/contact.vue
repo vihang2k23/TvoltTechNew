@@ -113,41 +113,41 @@ import ContactForm from '@/components/ContactForm.vue'
 
 /* Hero Section */
 .hero {
-            position: relative;
-            height: 65vh;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+  position: relative;
+  height: 65vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .hero-overlay {
   position: absolute;
@@ -157,29 +157,6 @@ import ContactForm from '@/components/ContactForm.vue'
   bottom: 0;
   background: linear-gradient(135deg, rgba(26, 42, 58, 0.8) 0%, rgba(44, 62, 80, 0.9) 100%);
 }
-
-/* .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  width: 100%;
-  text-align: center;
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.9);
-} */
 
 /* Container */
 .container {
@@ -289,34 +266,286 @@ import ContactForm from '@/components/ContactForm.vue'
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+/* ========== RESPONSIVE DESIGN ========== */
 
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-grid {
+    gap: 2rem;
+  }
+  
   .contact-info {
-    padding-right: 0;
+    padding-right: 1rem;
+  }
+  
+  .info-card {
+    padding: 1.5rem;
+  }
+  
+  .info-item {
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .info-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+  
+  .map-section {
+    padding: 3rem 0;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+  .hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
   }
-
+  
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
-
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
   }
-
+  
+  .section-title::after {
+    width: 60px;
+    bottom: -8px;
+  }
+  
+  /* Contact Info Section */
+  .contact-info-section {
+    padding: 3rem 0;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-info {
+    padding-right: 0;
+  }
+  
+  .info-card {
+    padding: 1.5rem 1rem;
+  }
+  
   .info-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .info-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .info-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .info-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .contact-form-section {
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Map Section */
+  .map-section {
+    padding: 2rem 0;
+  }
+  
+  .map-container {
+    border-radius: 8px;
+  }
+  
+  .map-container iframe {
+    height: 350px;
+  }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+  .hero {
+    height: 35vh;
+    min-height: 250px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .contact-info-section {
+    padding: 2rem 0;
+  }
+  
+  .info-card {
+    padding: 1rem;
+  }
+  
+  .info-item {
+    margin-bottom: 1.25rem;
+  }
+  
+  .info-content h3 {
+    font-size: 1rem;
+  }
+  
+  .info-content p {
+    font-size: 0.85rem;
+  }
+  
+  .contact-form-section {
+    padding: 1rem;
+  }
+  
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+/* Large Desktop Styles (min-width: 1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-grid {
+    gap: 4rem;
+  }
+  
+  .info-card {
+    padding: 3rem 2rem;
+  }
+  
+  .contact-form-section {
+    padding: 3rem;
+  }
+}
+
+/* Special handling for very small screens */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .info-card {
+    padding: 0.75rem;
+  }
+  
+  .contact-form-section {
+    padding: 0.75rem;
+  }
+}
+
+/* Ensure proper spacing for the contact form component */
+.contact-form-section :deep(.contact-form) {
+  width: 100%;
+}
+
+/* Print Styles */
+@media print {
+  .hero {
+    height: auto;
+    min-height: auto;
+    background: white !important;
+    color: black;
+  }
+  
+  .hero-overlay {
+    display: none;
+  }
+  
+  .contact-info-section,
+  .map-section {
+    padding: 2rem 0;
+  }
+  
+  .info-card,
+  .contact-form-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
   }
 }
 </style>

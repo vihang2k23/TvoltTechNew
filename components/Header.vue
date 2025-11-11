@@ -1,96 +1,126 @@
-  <template>
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-      <NuxtLink to="/">
-    <img class="h-10 w-auto" src="/images/logo1.png" alt="TVoltTech Logo" />
-  </NuxtLink>
-
-        </div>
-        
-        <nav class="nav" :class="{ 'active': isMenuOpen }">
-          <ul class="nav-list">
-            <li class="nav-item" @click="closeMenu">
-              <NuxtLink to="/" class="nav-link" active-class="active-link">Home</NuxtLink>
-            </li>
-            <li class="nav-item" @click="closeMenu">
-              <NuxtLink to="/about" class="nav-link" active-class="active-link">About</NuxtLink>
-            </li>
-            <li class="nav-item dropdown" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false">
-              <NuxtLink to="/products" class="nav-link" active-class="active-link" @click.prevent>
-    Products
-    <svg class="dropdown-icon" viewBox="0 0 24 24">
-      <path d="M7 10l5 5 5-5z"/>
-    </svg>
-  </NuxtLink>
-
-              <transition name="dropdown">
-                <ul v-if="showDropdown" class="dropdown-menu">
-                  <li class="dropdown-item" @click="closeMenu">
-                    <NuxtLink to="/products/1" class="dropdown-link">
-                      Low Tension Instruments
-                    </NuxtLink>
-                  </li>
-                  <li class="dropdown-item" @click="closeMenu">
-                    <NuxtLink to="/products/3" class="dropdown-link">
-                      Medium Voltage Instruments
-                    </NuxtLink>
-                  </li>
-                  <li class="dropdown-item" @click="closeMenu">
-                    <NuxtLink to="/products/5" class="dropdown-link">
-                      Oil Cooled Units
-                    </NuxtLink>
-                  </li>
-                  <li class="dropdown-item" @click="closeMenu">
-                    <NuxtLink to="/products/6" class="dropdown-link">
-                      Epoxy Components
-                    </NuxtLink>
-                  </li>
-                  <li class="dropdown-item" @click="closeMenu">
-                    <NuxtLink to="/products/7" class="dropdown-link">
-                      Distribution Transformers
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </transition>
-            </li>
-            <li class="nav-item" @click="closeMenu">
-              <NuxtLink to="/contact" class="nav-link" active-class="active-link">Contact</NuxtLink>
-            </li>
-          </ul>
-        </nav>
-        
-        <div class="cta-button">
-  <a href="/brochure.pdf" download class="btn-primary">
-    Get a Quote
-  </a>
-</div>
-        
-        <button class="mobile-menu-button" @click="toggleMenu" :aria-expanded="isMenuOpen">
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-        </button>
+<template>
+  <header class="header" :class="{ active: isMenuOpen }">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <NuxtLink to="/">
+          <img class="h-10 w-auto" src="/images/logo1.png" alt="TVoltTech Logo" />
+        </NuxtLink>
       </div>
-    </header>
-  </template>
 
-  <script setup>
-  const isMenuOpen = ref(false);
-  const showDropdown = ref(false);
+      <!-- Navigation -->
+      <nav class="nav" :class="{ active: isMenuOpen }">
+        <ul class="nav-list">
+          <li class="nav-item" @click="closeMenu">
+            <NuxtLink to="/" class="nav-link" active-class="active-link">Home</NuxtLink>
+          </li>
+          <li class="nav-item" @click="closeMenu">
+            <NuxtLink to="/about" class="nav-link" active-class="active-link">About</NuxtLink>
+          </li>
 
-  const toggleMenu = () => {
-    isMenuOpen.value = !isMenuOpen.value;
-    document.body.classList.toggle('no-scroll', isMenuOpen.value);
-  };
+          <!-- Products Dropdown -->
+          <li
+            class="nav-item dropdown"
+            style="margin-top: 4px;"
+            @mouseenter="handleMouseEnter"
+            @mouseleave="handleMouseLeave"
+          >
+            <button
+              class="nav-link dropdown-toggle"
+              @click="toggleDropdown"
+            >
+              Products
+              <svg class="dropdown-icon" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z" />
+              </svg>
+            </button>
 
-  const closeMenu = () => {
-    isMenuOpen.value = false;
-    showDropdown.value = false;
-    document.body.classList.remove('no-scroll');
-  };
-  </script>
+            <transition name="dropdown">
+              <ul v-if="showDropdown" class="dropdown-menu">
+                <li class="dropdown-item" @click="closeMenu">
+                  <NuxtLink to="/products/1" class="dropdown-link">Low Tension Instruments</NuxtLink>
+                </li>
+                <li class="dropdown-item" @click="closeMenu">
+                  <NuxtLink to="/products/3" class="dropdown-link">Medium Voltage Instruments</NuxtLink>
+                </li>
+                <li class="dropdown-item" @click="closeMenu">
+                  <NuxtLink to="/products/5" class="dropdown-link">Oil Cooled Units</NuxtLink>
+                </li>
+                <li class="dropdown-item" @click="closeMenu">
+                  <NuxtLink to="/products/6" class="dropdown-link">Epoxy Components</NuxtLink>
+                </li>
+                <li class="dropdown-item" @click="closeMenu">
+                  <NuxtLink to="/products/7" class="dropdown-link">Distribution Transformers</NuxtLink>
+                </li>
+              </ul>
+            </transition>
+          </li>
 
+          <li class="nav-item" @click="closeMenu">
+            <NuxtLink to="/contact" class="nav-link" active-class="active-link">Contact</NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CTA -->
+      <div class="cta-button">
+        <a href="/brochure.pdf" download class="btn-primary">Get a Quote</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-button" @click="toggleMenu" :aria-expanded="isMenuOpen">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+  </header>
+</template>
+
+<script setup>
+const isMenuOpen = ref(false);
+const showDropdown = ref(false);
+const isDesktop = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  document.body.classList.toggle("no-scroll", isMenuOpen.value);
+  if (!isMenuOpen.value) showDropdown.value = false;
+};
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+  showDropdown.value = false;
+  document.body.classList.remove("no-scroll");
+};
+
+const handleMouseEnter = () => {
+  if (isDesktop.value) showDropdown.value = true;
+};
+
+const handleMouseLeave = () => {
+  if (isDesktop.value) showDropdown.value = false;
+};
+
+const toggleDropdown = () => {
+  if (!isDesktop.value) showDropdown.value = !showDropdown.value;
+};
+
+// detect desktop / mobile width
+const checkScreen = () => {
+  isDesktop.value = window.innerWidth > 1024;
+  if (isDesktop.value) showDropdown.value = false;
+};
+
+onMounted(() => {
+  checkScreen();
+  window.addEventListener("resize", checkScreen);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", checkScreen);
+});
+</script>
   <style scoped>
   .header {
     background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
@@ -352,4 +382,50 @@
     height: 48px;
     width: auto;
   }
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  color: #3498db;
+}
+
+/* Responsive dropdown improvement */
+@media (max-width: 1024px) {
+  .dropdown-menu {
+    position: static;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .dropdown-link {
+    color: white;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-link:hover {
+    color: #3498db;
+  }
+
+  .dropdown-toggle svg {
+    transition: transform 0.3s;
+  }
+
+  .dropdown-menu-enter-active,
+  .dropdown-menu-leave-active {
+    transition: all 0.3s ease;
+  }
+}
   </style>

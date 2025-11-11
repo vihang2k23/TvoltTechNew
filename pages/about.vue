@@ -128,17 +128,6 @@
                   <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/>
                 </svg>
               </div>
-              <!-- <div class="point-text">
-                <h3>Market Reach</h3>
-                <p>Serving both private and government sectors across India</p>
-              </div> -->
-            </div>
-            <div class="global-point">
-              <div class="point-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
-                </svg>
-              </div>
               <div class="point-text">
                 <h3>Quality Assurance</h3>
                 <p>All products undergo strict routine testing as per IS and IEC standards</p>
@@ -147,7 +136,7 @@
             <div class="global-point">
               <div class="point-icon">
                 <svg viewBox="0 0 24 24">
-                  <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
                 </svg>
               </div>
               <div class="point-text">
@@ -198,19 +187,6 @@
       </div>
     </section>
 
-    <!-- CSR Section -->
-    <!-- <section class="csr-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Our CSR Policy</h2>
-          <div class="section-content">
-            <p>We believe in Engineering Excellence with focus on fast development and innovations. A well balanced mix of sophisticated machines and team of expert engineers enables us to offer premium products for Generation, Transmission and Distribution equipment.</p>
-            <p>We are driven by process approach towards total customer satisfaction.</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    
     <!-- Management Section -->
     <section class="management-section">
       <div class="container">
@@ -252,107 +228,13 @@
   <Footer/>
 </template>
 
-
 <style scoped>
-.management-section {
-  padding: 5rem 0;
-  background: #f8fafc;
-}
-
-.management-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.management-card {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.management-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.management-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #3498db, #2ecc71);
-  border-radius: 50%;
-}
-
-.management-icon svg {
-  width: 40px;
-  height: 40px;
-  fill: white;
-}
-
-.management-card h3 {
-  font-size: 1.25rem;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-}
-
-.management-card p {
-  color: #7f8c8d;
-  font-weight: 500;
-}
+/* Base Styles */
 .about-page {
   display: flex;
   flex-direction: column;
 }
 
- 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 65vh;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-
-/* Container */
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -405,6 +287,44 @@
   text-align: center;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 65vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/images/about.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Company Section */
 .company-section {
   padding: 5rem 0;
@@ -445,94 +365,49 @@
   color: #7f8c8d;
   font-weight: 500;
 }
- /* Vision & Mission Section - Centered */
- .mission-section {
-            background: #f8fafc;
-            text-align: center;
-        }
-        
-        .mission-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        .mission-section .section-title::after {
-            background: linear-gradient(to right, var(--accent), #ff8c00);
-        }
-        
-        .mission-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--gray);
-        }
-        
-        .subsection-title {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin: 3rem 0 1.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .subsection-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--accent);
-        }
-        
-        .vision-highlight {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .vision-highlight::before {
-            content: "";
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-        
-        .vision-highlight::after {
-            content: "";
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-        
-        .vision-highlight .subsection-title {
-            color: white;
-            margin-top: 0;
-        }
-        
-        .vision-highlight .subsection-title::after {
-            background: var(--accent);
-        }
-        
-        .vision-highlight p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.3rem;
-            font-style: italic;
-        }
+
+/* Vision & Mission Section - Centered */
+.mission-section {
+  background: #f8fafc;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.mission-section .section-title::after {
+  background: linear-gradient(to right, #3498db, #ff8c00);
+}
+
+.mission-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  color: #3498db;
+  margin: 3rem 0 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.subsection-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #ff8c00;
+}
+
 /* Certifications Section */
 .certifications-section {
   padding: 5rem 0;
@@ -607,6 +482,19 @@
 
 .global-point .point-icon {
   flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  border-radius: 50%;
+}
+
+.global-point .point-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
 }
 
 .global-point .point-text h3 {
@@ -673,63 +561,391 @@
   color: #7f8c8d;
 }
 
-/* CSR Section */
-.csr-section {
+/* Management Section */
+.management-section {
   padding: 5rem 0;
   background: #f8fafc;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .mission-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .mission-content {
-    padding-right: 0;
-    order: 2;
-  }
-  
-  .mission-image {
-    order: 1;
-  }
+.management-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-@media (max-width: 768px) {
+.management-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.management-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.management-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  border-radius: 50%;
+}
+
+.management-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
+}
+
+.management-card h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.management-card p {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
   }
   
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
   }
   
   .stats-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .mission-content p {
+    font-size: 1.1rem;
+  }
+  
+  .subsection-title {
+    font-size: 1.6rem;
+  }
+  
+  .global-point {
+    gap: 1.2rem;
+  }
+  
+  .global-point .point-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .global-point .point-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+  .hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    bottom: -8px;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  /* Company Section */
+  .company-section {
+    padding: 3rem 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  /* Mission Section */
+  .mission-section {
+    padding: 3rem 0;
+  }
+  
+  .mission-content {
+    padding: 0 0.5rem;
+  }
+  
+  .mission-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .subsection-title {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+  }
+  
+  /* Certifications Section */
+  .certifications-section {
+    padding: 3rem 0;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .certification-card {
+    padding: 1.5rem;
+  }
+  
+  .certification-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .certification-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .certification-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Global Section */
+  .global-section {
+    padding: 3rem 0;
+  }
+  
+  .global-points {
+    max-width: 100%;
   }
   
   .global-point {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .global-point .point-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .global-point .point-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Values Section */
+  .values-section {
+    padding: 3rem 0;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .value-card {
+    padding: 1.5rem;
+  }
+  
+  .value-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .value-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Management Section */
+  .management-section {
+    padding: 3rem 0;
+  }
+  
+  .management-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .management-card {
+    padding: 1.5rem;
+  }
+  
+  .management-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+  
+  .management-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .management-card h3 {
+    font-size: 1.2rem;
   }
 }
 
+/* Small Mobile Styles (up to 480px) */
 @media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
+  .hero {
+    height: 35vh;
+    min-height: 250px;
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .subsection-title {
+    font-size: 1.2rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .mission-content p {
+    font-size: 0.95rem;
+  }
+  
+  .global-point .point-text p,
+  .certification-card p,
+  .value-card p,
+  .management-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Desktop Styles (min-width: 1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .stats-grid {
+    gap: 3rem;
+  }
+  
+  .stat-card {
+    padding: 3rem 2rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
   }
 }
 </style>
