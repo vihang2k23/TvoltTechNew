@@ -64,7 +64,7 @@
 
       <!-- CTA -->
       <div class="cta-button">
-        <a href="/brochure.pdf" download class="btn-primary">Get a Quote</a>
+        <a href="/TVOLTTECH BROCHURE_PRINT.pdf" download class="btn-primary">Get a Quote</a>
       </div>
 
       <!-- Mobile Menu Toggle -->
